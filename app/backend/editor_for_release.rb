@@ -8,6 +8,7 @@ Railsyard::Backend.define_editor_for Release do
   edit do
     group :general do
       field :name
+      field :artists
       field :release_type
       field :genre
       field :tracklist, as: :wysihtml5 do
