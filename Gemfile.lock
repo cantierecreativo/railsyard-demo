@@ -95,6 +95,7 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
+    country_select (1.0.1)
     dragonfly (0.9.12)
       rack
     erubis (2.7.0)
@@ -185,6 +186,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  country_select
   jquery-rails
   pg
   rails (= 3.2.8)

@@ -8,6 +8,7 @@ gem 'railsyard-backend', github: 'cantierecreativo/railsyard-backend', branch: '
 gem 'railsyard-wysihtml5', github: 'cantierecreativo/railsyard-wysihtml5'
 gem 'railsyard-dragonfly', github: 'cantierecreativo/railsyard-dragonfly'
 gem 'railsyard-gallery', github: 'cantierecreativo/railsyard-gallery'
+gem 'country_select'
 
 # Gems used only for assets and not required
 # in production environments by default.
