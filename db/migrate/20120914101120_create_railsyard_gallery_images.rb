@@ -1,0 +1,16 @@
+class CreateRailsyardGalleryImages < ActiveRecord::Migration
+
+  def change
+    create_table :railsyard_gallery_images do |t|
+      t.integer   :imageable_id
+      t.string   :imageable_type
+      t.string   :imageable_relation
+      t.string   :alt
+      t.string   :title
+      t.string   :image_name
+      t.string   :image_uid
+    end
+    add_index :railsyard_gallery_images, [:imageable_id, :imageable_type, :imageable_relation], name: 'railsyard_gallery_images_imageable'
+  end
+
+end
