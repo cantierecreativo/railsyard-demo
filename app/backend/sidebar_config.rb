@@ -7,4 +7,8 @@ Railsyard::Backend.define_sidebar do
     resource Genre
   end
 
+  group do
+    instance Settings
+  end
+
 end
