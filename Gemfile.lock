@@ -30,7 +30,7 @@ GIT
 
 GIT
   remote: git://github.com/cantierecreativo/railsyard-gallery.git
-  revision: 155b63715b34d8f3d9222afa4a22ed0801b7139b
+  revision: 57ce9f36ddd78b5b82d1cfce3fc11114b6b6d4ce
   specs:
     railsyard-gallery (0.1.0)
       activerecord (>= 3.0.0)
