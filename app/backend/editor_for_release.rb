@@ -10,11 +10,15 @@ Railsyard::Backend.define_editor_for Release do
       field :name
       field :release_type
       field :genre
-      image :artwork
       field :tracklist, as: :wysihtml5 do
         input_options toolbar:
           {commands: [:bold, :italic, :link, :image, :unordered_list, :ordered_list, :source]} # any of these
       end
+    end
+
+    group :artwork do
+      image :artwork
+      field :artwork_artist
     end
 
     group :publishing do

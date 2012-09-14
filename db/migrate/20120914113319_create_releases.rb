@@ -8,6 +8,7 @@ class CreateReleases < ActiveRecord::Migration
       t.string :barcode
       t.text :tracklist
       t.boolean :published
+      t.string :artwork_artist
 
       t.timestamps
     end

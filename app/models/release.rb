@@ -4,5 +4,5 @@ class Release < ActiveRecord::Base
 
   belongs_to :release_type
   belongs_to :genre
-  attr_accessible :barcode, :name, :published, :release_date, :tracklist, :artwork_attributes, :genre_id, :release_type_id
+  attr_accessible :barcode, :name, :published, :release_date, :tracklist, :artwork_attributes, :artwork_artist, :genre_id, :release_type_id
 end
