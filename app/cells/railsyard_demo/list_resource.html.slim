@@ -1,0 +1,23 @@
+css:
+  .list_resource_wrap {margin: 8px 10px}
+  table {width: 100%; font-size: 13px}
+  thead {border-bottom: 1px solid #CCC}
+  th {font-weight: bold}
+  td, th {padding: 4px}
+
+.list_resource_wrap
+  table
+    thead
+      tr
+        - @fields_name.each do |name|
+          th = name
+
+    tbody
+      - @items.each do |item|
+        tr
+          - @fields.each_with_index do |field, i|
+            td
+              - if i == 0
+                a href=edit_resource_path(item) = item.send field
+              - else
+                = item.send field
