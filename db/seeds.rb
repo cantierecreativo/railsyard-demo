@@ -1,6 +1,7 @@
 lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed lorem in mauris condimentum eleifend. Proin vitae enim vel orci semper auctor sed sit amet ipsum. Maecenas sapien lacus, vestibulum quis egestas eget, molestie tristique turpis. Quisque sodales imperdiet enim ac tempus. Donec venenatis sodales tortor, sed bibendum arcu scelerisque in. Duis vulputate feugiat ullamcorper. Quisque molestie libero et mauris rutrum scelerisque. Donec scelerisque tincidunt ullamcorper. Nam cursus tincidunt nisi quis gravida. Donec aliquam lacus ac enim ultricies non pulvinar massa luctus. Sed imperdiet ante quis tortor porttitor quis rutrum tellus pretium. Aenean euismod imperdiet aliquet. Phasellus at neque a eros bibendum viverra quis vel orci. Maecenas et augue erat, sit amet porttitor nibh."
 
 ### Users and settings ###
+User.create! name: "Yard Admin", email: "admin@example.com", password: "changeme"
 Settings.create
 
 ### Genres ###
@@ -36,7 +37,7 @@ r1.tracklist = <<HTML
 <li>Hospitality Undiscovered</li>
 <li>Shock Is All There Is</li>
 <li>Techniques Are No Excuse</li>
-<li>Impossible Courtship<li>
+<li>Impossible Courtship</li>
 <li>Greased Fear</li>
 <li>Window Of Brilliance</li>
 <li>Explosive Humility</li>

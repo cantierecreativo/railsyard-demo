@@ -7,6 +7,7 @@ namespace :db do
     Release.destroy_all
     ReleaseType.destroy_all
     Settings.destroy_all
+    User.destroy_all
   end
 
 end
