@@ -1,0 +1,119 @@
+<% content_for :banner do %>
+    <div id="sub-banner">
+    	<div class="in">
+        <div class="map" data-latitude="<%= @settings.contact_latitude %>" data-longitude="<%= @settings.contact_longitude %>" data-zoom="15" data-title="<%= @settings.site_name %>"></div>
+        </div>
+    </div>
+<% end %>
+
+    <!-- Content Section Start -->
+    <div id="content-sec">
+    	<div class="inner">
+        	<!-- Columns Section Start -->
+            <div class="columns-sec twocol">
+            	<!-- Column Three Start -->
+                <div class="col3">
+                	<div class="contact">
+                    	<h1 class="heading colr">Contact Us</h1>
+                        <!-- Contact Us Start -->
+                        <div class="contact-page">
+                        	<div class="cont-sec">
+                                <div class="thumb">
+                                    <a href="#"><img src="/assets/soundrock/img20.jpg" alt="" /></a>
+                                </div>
+                                <div class="desc"><%= @settings.contact_text.html_safe %></div>
+                            </div>
+                            <div class="inquiry">
+                            	<h1 class="heading colr">Quick Inquary</h1>
+                                <form class="cont-forms">
+                                    <ul>
+                                        <li>
+                                            <input name="" value="Enter Name"
+                                            onfocus="if(this.value=='Enter Name') {this.value='';}"
+                                            onblur="if(this.value=='') {this.value='Enter Name';}" type="text" />
+                                            <span class="img-icon name">&nbsp;</span>
+                                        </li>
+                                        <li>
+                                            <input name="" value="Enter Email"
+                                            onfocus="if(this.value=='Enter Email') {this.value='';}"
+                                            onblur="if(this.value=='') {this.value='Enter Email';}" type="text" />
+                                            <span class="img-icon email">&nbsp;</span>
+                                        </li>
+                                        <li>
+                                            <input name="" value="Enter Company Name"
+                                            onfocus="if(this.value=='Enter Company Name') {this.value='';}"
+                                            onblur="if(this.value=='') {this.value='Enter Company Name';}" type="text" />
+                                            <span class="img-icon company-name">&nbsp;</span>
+                                        </li>
+                                        <li>
+                                            <textarea rows="" cols=""
+                                            onfocus="if(this.value=='Enter Massage') {this.value='';}"
+                                            onblur="if(this.value=='') {this.value='Enter Massage';}" />Enter Massage</textarea>
+                                            <span class="img-icon message">&nbsp;</span>
+                                        </li>
+                                        <li>
+                                            <button>Submit Comment</button>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <!-- Post Detail End -->
+                    </div>
+                </div>
+                <!-- Column One End -->
+                <!-- Column One Start -->
+                <div class="col1 hidemobile">
+                	<!-- Text Widget Start -->
+                	<div class="widget text-widget">
+                    	<h1 class="heading colr">Contact Info</h1>
+                        <p class="bold"><%= @settings.contact_address.html_safe %></p>
+                        <p>
+                        	Telephone:  <%= @settings.contact_phone %><br />
+                            Fax:  <%= @settings.contact_fax %><br />
+                            E-mail: <%= mail_to @settings.contact_email %><br />
+                        </p>
+                    </div>
+                    <!-- Text Widget End -->
+                    <!-- Twitter feeds Start -->
+                    <div class="widget tweets noback">
+                    	<h1 class="heading colr">From Twitter</h1>
+                        <ul>
+                        	<li>
+                            	<div class="title">
+                                	<a href="#" class="txthover">User 345 said</a>
+                                    3 mins ago
+                                </div>
+                                <p>
+                                	Esse molestie consequat vel illum dolore eu feugiat bit.ly/45rdf4 at. Nunc putamus parum claram anteposuerit #twitter #feed
+                                </p>
+                            </li>
+                            <li>
+                            	<div class="title">
+                                	<a href="#" class="txthover">User 345 said</a>
+                                    3 mins ago
+                                </div>
+                                <p>
+                                	Esse molestie consequat vel illum dolore eu feugiat bit.ly/45rdf4 at. Nunc putamus parum claram anteposuerit #twitter #feed
+                                </p>
+                            </li>
+                            <li>
+                            	<div class="title">
+                                	<a href="#" class="txthover">User 345 said</a>
+                                    3 mins ago
+                                </div>
+                                <p>
+                                	Esse molestie consequat vel illum dolore eu feugiat bit.ly/45rdf4 at. Nunc putamus parum claram anteposuerit #twitter #feed
+                                </p>
+                            </li>
+                        </ul>
+                        <a href="#" class="buttonone">Follow Us on Twitter</a>
+                    </div>
+                    <!-- Twitter feeds End -->
+                </div>
+                <!-- Column One End -->
+            </div>
+            <!-- Columns Section End -->
+        </div>
+    </div>

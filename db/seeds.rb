@@ -2,7 +2,23 @@ lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed lor
 
 ### Users and settings ###
 User.create! name: "Yard Admin", email: "admin@example.com", password: "changeme"
-Settings.create
+Settings.create( site_name: "Yard Records",
+                 home_banner_text: '<h1><a href="/artists">THE ANTANIS</a></h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tellus orci, semper et ornare dictum, varius ut tellus. In consectetur, velit vel interdum fringilla, felis justo scelerisq urna, ut scelerisque enim elit id est. Sed felis libero, malesuada ut vestibulum aliquam, feugiat ut augue.Sed felis libero, malesuada ut vestibulum aliquam, feugiat ut.</p>
+                                    <a href="/artists" class="banner-more"><span class="backcolr">Read More</span><span class="corner">&nbsp;</span></a>',
+                 home_text: '<h1 class="heading colr">The best record label ever</h1>
+                             <p>This is a made-up site to show the awesome features of the new Railsyard CMS. Log into the admin panel to unveil the power!</p>',
+                 about_text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque tristique dolor vitae tincidunt. Aenean quis massa uada mi elementum elementum. Suspendisse ac eros nec sapien convallis vulputate rhoncus vel dui. Aliquam urna nunc, lacinia non aliquam in, lobortis at quam. Sed quis elit eu mauris egestas mattis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque tristique dolor vitae tincidunt. Aenean quis massa uada mi elementum elementum. Suspendisse ac eros nec sapien convallis vulputate rhoncus vel dui. Aliquam urna nunc. Sed quis elit eu mauris egestas mattis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque tristique dolor vitae tincidunt. Aenean quis massa uada mi elementum elementum. Suspendisse ac eros nec sapien convallis vulputate rhoncus vel dui. Aliquam urna nunc.</p>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque tristique dolor vitae tincidunt. Aenean quis massa uada mi elementum elementum. Suspendisse ac eros nec sapien convallis vulputate rhoncus vel dui. Aliquam urna nunc, lacinia non aliquam in, lobortis at quam. Sed quis elit eu mauris egestas mattis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque tristique dolor vitae tincidunt. Aenean quis massa uada mi elementum elementum. Suspendisse ac eros nec sapien convallis vulputate rhoncus vel dui. Aliquam urna nunc. Sed quis elit eu mauris egestas mattis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque tristique dolor vitae tincidunt. Aenean quis massa uada mi elementum elementum. Suspendisse ac eros nec sapien convallis vulputate rhoncus vel dui. Aliquam urna nunc.</p>',
+                 contact_text: '<h3 class="colr">WE ARE ROCKING</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque tristique dolor vitae tincidunt. Aenean quis massa uada mi elementum elementum. Suspendisse ac eros nec sapien convallis vulputate rhoncus vel dui. Aliquam urna nunc, lacinia non aliquam in, lobortis at quam. Sed quis elit eu mauris egestas mattis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque tristique dolor vitae tincidunt. Aenean quis massa uada mi elementum elementum.</p>',
+                 contact_address: 'Via Francesco Botticini 3 <br> 50143 - Firenze, Italy',
+                 contact_phone: '+39 055 2345008',
+                 contact_fax: '+39 055 2345008',
+                 contact_email: 'info@cantierecreativo.net',
+                 contact_latitude: 43.76980,
+                 contact_longitude: 11.21545,
+                 )
 
 ### Genres ###
 {
@@ -44,6 +60,7 @@ r1.tracklist = <<HTML
 <li>64 Thousand Dollar Spotlight</li>
 </ol>
 HTML
+r1.release_date = Date.today
 r1.published = true
 a1 = Railsyard::Gallery::Image.create
 a1.imageable_relation = "artwork"
@@ -70,6 +87,7 @@ r2.tracklist = <<HTML
 <li>Destructive Parade</li>
 </ol>
 HTML
+r2.release_date = Date.today
 r2.published = true
 a2 = Railsyard::Gallery::Image.create
 a2.imageable_relation = "artwork"

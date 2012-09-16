@@ -1,0 +1,33 @@
+<% content_for :banner do %>
+    <div id="sub-banner">
+    	<div class="in">
+        	<a href="#"><img src="/assets/soundrock/sub-banner1.jpg" alt="" /></a>
+        </div>
+    </div>
+<% end %>
+
+    <!-- Album Shades Start -->
+    <div id="album-shelves">
+    	<h1 class="heading colr"><%= @title %></h1>
+      <h2 class="heading" style="color:white"><%= "No releases found!" if @items.empty? %></h2>
+    	<div class="inner">
+        	<!-- Columns Section Start -->
+            <ul class="album-list">
+              <% @items.each do |release| %>
+              	<li>
+                <%= link_to image_tag(release.artwork.image.thumb('210x210#').url), release_path(release), class: "thumb" if release.artwork %>
+                <h3><%= link_to release.name, release_path(release), class: "colr" %></h3>
+                <h4><%= artists_links release.artists %></h4>
+                    <p>
+                    	<%= "Type: #{release.release_type.name}" if release.release_type %><br />
+                      <%= "Genre: #{release.genres}" %><br />
+                    </p>
+                    <%= link_to "VIEW DETAIL", release_path(release), class: "bigbutton" %>
+                </li>
+                <% end %>
+            </ul>
+            <div class="clear"></div>
+            <!-- Columns Section End -->
+        </div>
+    </div>
+    <!-- Album Shades End -->

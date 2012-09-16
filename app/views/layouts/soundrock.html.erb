@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title><%= @settings.site_name %> <%= " :: #{@title}" if @title %></title>
+<meta name="description" content="A made-up site to show Railsyard-backend features">
+<meta name="author" content="Team Cantiere Creativo">
+<!--// Mobile Metas //-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--// Stylesheets //-->
+<%= stylesheet_link_tag    "application", :media => "all" %>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--// Favicons //-->
+<link rel="shortcut icon" href="/assets/soundrock/favicon.ico" />
+<link rel="rockit-touch-icon" href="/assets/soundrock/rockit-touch-icon.png" />
+<link rel="rockit-touch-icon" sizes="72x72" href="/assets/soundrock/rockit-touch-icon-72x72.png" />
+<link rel="rockit-touch-icon" sizes="114x114" href="/assets/soundrock/rockit-touch-icon-114x114.png" />
+<!--// Javascript //-->
+<%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false" %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+</head>
+
+<!-- Outer Wrapper Start -->
+<div id="outer-wrapper">
+	<!-- Header Start -->
+	<div id="header">
+    	<div class="inner">
+        	<!-- Container Start -->
+            <div class="container">
+                <!-- Logo Start -->
+                <div class="five columns left">
+                    <a href="index.html" class="logo"><img src="/assets/soundrock/logo.png" alt="" /></a>
+                </div>
+                <!-- Logo End -->
+                <div class="eleven columns right">
+                    <!-- Top Links Start -->
+                    <ul class="top-links">
+                        <li>
+                            <h4 class="colr">Search Music</h4>
+                            <div id="search-box">
+                                <input name="" value="Enter any keyword"
+                                onfocus="if(this.value=='Enter any keyword') {this.value='';}"
+                                onblur="if(this.value=='') {this.value='Enter any keyword';}" type="text" class="bar" />
+                                <button>Search</button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="<%= backend_index_path %>" class="colr">LOG IN</a>
+                        </li>
+                    </ul>
+                    <!-- Top Links End -->
+                </div>
+                <%= render partial: "partials/menu" %>
+            </div>
+            <!-- Container End -->
+        </div>
+    </div>
+    <!-- Header End -->
+    <div class="clear"></div>
+
+    <!-- Banner Start -->
+    <%= yield :banner %>
+    <!-- Banner End -->
+
+    <!-- Content Section Start -->
+    <%= yield %>
+    <!-- Content Section End -->
+    <div class="clear"></div>
+
+    <!-- Footer Start -->
+    <div id="footer">
+    	<div class="inner">
+        	<!-- // Go to Top // -->
+        	<a href="#top" class="gotop">&nbsp;</a>
+        	<!-- Footer Left Start -->
+            <div class="ft-left">
+            	<h4><a href="#" class="colr"><%= @settings.site_name %></a></h4>
+                <ul class="links">
+                	<li><a href="/">HOME</a></li>
+                    <li><a href="<%= releases_path %>">RELEASES</a></li>
+                    <li><a href="<%= artists_path %>">ARTISTS</a></li>
+                    <li><a href="<%= about_path %>">ABOUT US</a></li>
+                    <li><a href="<%= contact_path %>">CONTACT US</a></li>
+                </ul>
+                <ul class="social">
+                	<li><a href="#" class="so-fb">&nbsp;</a></li>
+                    <li><a href="#" class="so-twitter">&nbsp;</a></li>
+                    <li><a href="#" class="so-vimeo">&nbsp;</a></li>
+                </ul>
+            </div>
+            <!-- Footer Left End -->
+            <!-- Footer Right Start -->
+            <div class="ft-right">
+            	<div class="contact-us">
+                    <h4 class="colr">Contact Us</h4>
+                    <p>For support, questions or feedback, mail us at </p>
+                    <h4 class="white">Phone: <%= @settings.contact_phone %><br /><%= mail_to @settings.contact_email %></h4>
+                </div>
+            </div>
+            <!-- Footer Left End -->
+            <!-- Copyrights Start -->
+            <div class="copyrights">
+            	 © Copyright <a href="http://cantierecreativo.net/">CantiereCreativo</a> 2012
+            </div>
+            <!-- Copyrights End -->
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div class="clear"></div>
+</div>
+<!-- Outer Wrapper End -->
+</body>
+</html>

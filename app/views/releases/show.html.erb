@@ -1,0 +1,88 @@
+<% content_for :banner do %>
+    <div id="sub-banner">
+    	<div class="in">
+        	<a href="#"><img src="/assets/soundrock/sub-banner3.jpg" alt="" /></a>
+        </div>
+    </div>
+<% end %>
+
+    <div id="content-sec">
+    	<div class="inner">
+        	<!-- Columns Section Start -->
+            <div class="columns-sec twocol">
+            	<!-- Column Three Start -->
+                <div class="col3">
+                	<div class="album-detail">
+                    	<h1 class="heading colr"><%= artists_links(@release.artists) %> / <%= @title %></h1>
+                        <!-- Album Detail Start -->
+                        <div class="album-detail-sec">
+                        	<div class="thumb">
+                            	<%= image_tag @release.artwork.image.thumb('210x210#').url if @release.artwork %>
+                            </div>
+                            <div class="desc">
+                                <p class="release">Release Date: <%= @release.release_date %></p>
+                                <p>Artists: <%= @release.artists.map(&:name).join ', ' %></p>
+                                <p>Type: <%= @release.release_type.name if @release.release_type %></p>
+                                <p>Genres: <%= @release.genres %></p>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <!-- Album Detail End -->
+                        <!-- Album List Start -->
+                        <div class="album-track-list">
+                        	<h2 class="heading colr">Album Tracks</h2>
+                            <div class="tracklist">
+                              <%= @release.tracklist.html_safe %>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="buynow">
+                            	<ul>
+                                    <li><h4 class="colr">BUY NOW FROM</h4></li>
+                                    <li><a href="#"><img src="/assets/soundrock/itune.png" alt="" /></a></li>
+                                    <li><a href="#"><img src="/assets/soundrock/amazon.png" alt="" /></a></li>
+                                    <li><a href="#"><img src="/assets/soundrock/soundcloud.png" alt="" /></a></li>
+                                    <li><a href="#"><img src="/assets/soundrock/grooveshark.png" alt="" /></a></li>
+                            	</ul>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="follow-us">
+                            	<ul>
+                                    <li><h4 class="colr">Listen on</h4></li>
+                                    <li><a href="#"><img src="/assets/soundrock/follow-1.png" alt="" /></a></li>
+                                    <li><a href="#"><img src="/assets/soundrock/follow-2.png" alt="" /></a></li>
+                                    <li><a href="#"><img src="/assets/soundrock/follow-3.png" alt="" /></a></li>
+                                    <li><a href="#"><img src="/assets/soundrock/follow-4.png" alt="" /></a></li>
+                                    <li><a href="#"><img src="/assets/soundrock/follow-5.png" alt="" /></a></li>
+                            	</ul>
+                            </div>
+                        </div>
+                        <!-- Album List End -->
+                    </div>
+                </div>
+                <!-- Column One End -->
+                <!-- Column One Start -->
+                <div class="col1 hidemobile">
+                    <!-- Facebook Start -->
+                    <div class="widget facebook">
+                        <a href="#"><img src="/assets/soundrock/facebook.jpg" alt="" /></a>
+                    </div>
+                    <!-- Facebook End -->
+                    <!-- Newsletter Start -->
+                    <div class="widget newsletter noback">
+                    	<h1 class="heading colr">Weekly Newsletter</h1>
+                        <input type="text" value="Enter your valid email address" />
+                        <button>SUBMIT</button>
+                    </div>
+                    <!-- Newsletter End -->
+                    <!-- Advertisment Start -->
+                    <div class="widget advert">
+                        <a href="#"><img src="/assets/soundrock/advert2.jpg" alt="" /></a>
+                        <span>Advertising</span>
+                    </div>
+                    <!-- Advertisment End -->
+                </div>
+                <!-- Column One End -->
+            </div>
+            <!-- Columns Section End -->
+        </div>
+    </div>
