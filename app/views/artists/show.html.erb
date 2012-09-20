@@ -1,0 +1,59 @@
+<% content_for :banner do %>
+    <div id="sub-banner">
+    	<div class="in">
+        	<a href="#"><img src="/assets/soundrock/sub-banner4.jpg" alt="" /></a>
+        </div>
+    </div>
+<% end %>
+
+    <div id="content-sec">
+    	<div class="inner">
+        	<!-- Columns Section Start -->
+            <div class="columns-sec twocol">
+            	<!-- Column Three Start -->
+                <div class="col3">
+                	<div class="blog">
+                    	<h1 class="heading colr"><%= @artist.name %></h1>
+                        <!-- Post Detail Start -->
+                        <div class="post-detail">
+                        	<div class="thumb">
+                            <%= image_tag @artist.photos.first.image.thumb('680x270#').url if @artist.photos.first %>
+                          </div>
+                          <div class="desc">
+                            <div class="post-opts">
+                              <p>From <%= @artist.country %></p>
+                              <p>Website: <%= link_to @artist.homepage_url, @artist.homepage_url %></p>
+                            </div>
+                            <%= raw @artist.biography %>
+                          </div>
+                        </div>
+                        <div class="clear"></div>
+                        <!-- Post Detail End -->
+                    </div>
+                </div>
+                <!-- Column One End -->
+                <!-- Column One Start -->
+                <div class="col1 hidemobile">
+                    <!-- Other Albums Start -->
+                    <div class="widget albums-widget noback">
+                    	<h1 class="heading colr">Albums</h1>
+                        <ul>
+                          <% @artist.releases.each do |release| %>
+                        	<li>
+                            	<a href="<%= release_path release %>" class="thumb"><%= image_tag release.artwork.image.thumb('120x104#').url if release.artwork %></a>
+                                <div class="desc">
+                                	<h4><%= link_to release.name, release_path(release) %></h4>
+                                  <p class="date">Release: <%= release.release_date %></p>
+                                  <%= link_to "Details", release_path(release) %>
+                                </div>
+                            </li>
+                            <% end %>
+                        </ul>
+                    </div>
+                    <!-- Other Albums End -->
+                </div>
+                <!-- Column One End -->
+            </div>
+            <!-- Columns Section End -->
+        </div>
+    </div>

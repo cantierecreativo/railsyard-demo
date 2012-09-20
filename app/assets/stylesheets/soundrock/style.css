@@ -1146,6 +1146,7 @@ ul.teamlist li .desc p.txt{
 	position:relative;
 	padding:20px 0px;
 	background:url(/assets/soundrock/line-hr.gif) repeat-x top;
+  min-height: 210px;
 }
 .late-news li:first-child{
 	background:none;

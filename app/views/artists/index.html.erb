@@ -1,0 +1,60 @@
+<% content_for :banner do %>
+    <div id="sub-banner">
+    	<div class="in">
+        	<a href="#"><img src="/assets/soundrock/sub-banner1.jpg" alt="" /></a>
+        </div>
+    </div>
+<% end %>
+
+   <div id="content-sec">
+    	<div class="inner">
+        	<!-- Columns Section Start -->
+            <div class="columns-sec twocol">
+            	<!-- Column Three Start -->
+                <div class="col3">
+                	<div class="news">
+                    	<h1 class="heading colr">Our artists</h1>
+                        <ul class="late-news">
+                          <% @artists.each do |artist| %>
+                            <% featured = artist.photos.first %>
+                            <li>
+                            	<div class="thumb">
+                                	<a href="<%= show_artists_path(pretty_url: artist.pretty_url) %>"><%= image_tag featured.image.thumb('210x210#').url if featured %></a>
+                                </div>
+                                <div class="desc">
+                                  <h3><%= link_to artist.name, show_artists_path(pretty_url: artist.pretty_url), :class => :colr %></h3>
+                                  <p><%= raw artist.biography %></p>
+                                  <%= link_to "Continue Reading", show_artists_path(pretty_url: artist.pretty_url), :class => :readmore %>
+                                </div>
+                            </li>
+                            <% end %>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Column One End -->
+                <!-- Column One Start -->
+                <div class="col1 hidemobile">
+                    <!-- Facebook Start -->
+                    <div class="widget facebook">
+                        <a href="#"><img src="/assets/soundrock/facebook.jpg" alt="" /></a>
+                    </div>
+                    <!-- Facebook End -->
+                    <!-- Newsletter Start -->
+                    <div class="widget newsletter noback">
+                    	<h1 class="heading colr">Weekly Newsletter</h1>
+                        <input type="text" value="Enter your valid email address" />
+                        <button>SUBMIT</button>
+                    </div>
+                    <!-- Newsletter End -->
+                    <!-- Advertisment Start -->
+                    <div class="widget advert">
+                        <a href="#"><img src="/assets/soundrock/advert2.jpg" alt="" /></a>
+                        <span>Advertising</span>
+                    </div>
+                    <!-- Advertisment End -->
+                </div>
+                <!-- Column One End -->
+            </div>
+            <!-- Columns Section End -->
+        </div>
+    </div>
