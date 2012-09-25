@@ -109,3 +109,15 @@ a2 = r2.build_artwork
 a2.image = open_image["img16.jpg"]
 a2.save!
 r2.save!
+
+r3 = Release.create(name: "Sand In The Vaseline")
+r3.artists << antani
+r3.release_type = ep
+r3.genre = Genre.find_by_name "Britpop"
+r3.tracklist = ""
+r3.release_date = Date.today
+r3.published = true
+a3 = r3.build_artwork
+a3.image = open_image["sitv.jpg"]
+a3.save!
+r3.save!
