@@ -8,6 +8,7 @@ namespace :db do
     ReleaseType.destroy_all
     Settings.destroy_all
     User.destroy_all
+    Railsyard::Gallery::Image.destroy_all
   end
 
 end

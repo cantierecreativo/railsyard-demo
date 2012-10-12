@@ -11,6 +11,4 @@ YardRecords::Application.routes.draw do
   resources :artists, only: [:index] do
     get ':pretty_url' => "artists#show", :on => :collection, :as => :show
   end
-
-  get "reset" => "reset#demo"
 end
